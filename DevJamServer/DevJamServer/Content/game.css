@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #2f6d9a;
+    width: 500px;
+    height: 500px;
+}
+
+section {
+    
+}
+
+
+    .gamearea h2 {
+    text-shadow: 0px 0px 5px #FFFFFF;
+        color: red;
+    }
+
+.timerarea {
+    width: 100%;
+}
+
+span.timer {
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+
+span.hint {
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+
+header {
+    width: 500px;
+    background-color: #2f6d9a;
+
+}
+
+header h1 {
+    color: red;
+    font-size: xx-large;
+    text-shadow: 0px 0px 5px #FFFFFF;
+    text-align: center;
+}

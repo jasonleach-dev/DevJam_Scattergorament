@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<header>
+    <h1>Scattergorament</h1>
+</header>
+<section>
+    <div data-bind="if: isGameRunning" >
+        <div class="gamearea">
+            <h2>Game In Progress</h2>
+            <div class="timerarea">
+                <span>Time Left: </span><span class="timer" data-bind="text:gameTimeLeft"></span>
+            </div>
+            <div>
+                <span>Your hint is: </span><span class="hint" data-bind="text:hint"></span>
+            </div>
+            <div>
+                <input type="text" data-bind="value: guess" />
+                <button data-bind="click: submitGuess">Submit Guess</button>
+            </div>
+        </div>
+    </div>
+
+    <div data-bind="ifnot: isGameRunning">
+        <div class="gamearea">
+            <h2>Waiting For Game</h2>
+            <span>Game Starts: </span><span class="timer" data-bind="text:gameWaitLeft"></span>
+        </div>
+    </div>
+</section>
+<footer>
+    <ul id="messages">
+    </ul>
+</footer>
+
+@section scripts
+{
+        <link rel="stylesheet" type="text/css" href="~/content/game.css" />
+        <script type="text/javascript" src="~/signalr/hubs" ></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Home/Index.js")"></script>   
+
+}
